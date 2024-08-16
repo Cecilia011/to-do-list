@@ -6,42 +6,66 @@
     /*Borde: la caja, padding las burbujas del paquete, marging: la bolsa en la que vino el paquete*/
     margin: 0%; 
     padding: 0%;
-    box-sizing: border-box;
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color: #694F8E;
-    
+    box-sizing: border-box; 
   }
 
   body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(182, 146, 194);;
+    background-color: #694F8E;
+    background-image: linear-gradient(19deg, #694F8E 0%, #988dbb 100%);
     /*De esta manera al agregar otro tipo de bg, la imagen o gradiante se acomodan al tamaño de la pantalla*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #522258;
+
    
+  }
+
+  h1{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #frase{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
   /*Display-flex: para determinar la dirección del elemento */
 
   .container{
     max-width: 80%;
-    width: 400px;
-    height: 600px;
+    width: 350px;
+    height: 500px;
     margin: 0 auto; 
-    padding: 40px;
-    border-radius: 30%;
-  }
+    border: 2px solid;
+    border-width: 2px;
+    border-color: #6c5b88;
+    padding: 20px; /* Espacio interior */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 15px rgba(167, 145, 173, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #f8c0f3;
+    
+}
 
-  .encabezado{
-    padding: 10px 0 5px 0;
-  }
+.container:hover {
+  box-shadow: 0 0 25px rgb(108, 96, 116);
+}
+
+.encabezado{
+  padding: 10px 0 5px 0;
+}
 
   .agregar{
     background-color: rgb(182, 146, 194);
@@ -61,16 +85,21 @@
   }
 
   .agregar i{
-    font-size: 45px;color: #FFDFD6;
+    font-size: 45px;
+    color: #FFDFD6;
 
   }
 
 .agregar input::placeholder{
   font-size: 1.1rem;
-  color: #E3A5C7;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #522258;
 }
 
-  #input{
+#input{
     width: 100%;
     height: 100%;
     border: none;
@@ -78,31 +107,33 @@
     background-color: #FFFED3;
     padding-left: 10px;
   
-  }
+}
 
-  .tareas h2{
+.tareas h2{
     margin-bottom: 20px;
-  }
+}
 
   .agregar input::placeholder{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #522258;
 }
 .agregar i{
     font-size: 45px;
     color: #522258;
 }
+
 .agregar i:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
+
 /* sección de tareas */
 .tareas h2{
     margin-bottom: 20px;
     /* color: #8C3061; */
 }
 .tareas li{
-    background-color: #DBAFA0;
+    background-color: #FFFED3;
     border-radius: 15px;
     padding: 10px;
     color: #522258;
@@ -110,6 +141,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 20px;
 }
 
 .tachado{
