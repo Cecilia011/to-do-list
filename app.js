@@ -1,71 +1,5 @@
-/*
 
-BORRADOR***
-
-X
-const fecha =document.querySelector('#fecha')
-const lista =document.querySelector('#lista')
-const elemento =document.querySelector('#elemento')
-const input =document.querySelector('#input')
-const botonAgregar =document.querySelector('#boton-agregar')
-
-
-
-
-Cuando la tarea cambie, se mocstrara solo el circulo
-
-const check = 'bi-record-circle'
-const tachado = 'tachado'
-const uncheck = 'bi-circle'
-
-let LIST;
-let id;
-
-const FECHA = new Date ()
-fecha.innerHTML= FECHA.toLocaleDateString('es-MX',{
-    weekday: 'long',
-    month: 'short',
-    day: "numeric",
-})
- 
-
-//DOM, nos permite hacer una interaccion con html, es una manera de llegar a las ramas del html (li en este caso)
-//Función agregar tarea.
-function agregarTarea (tarea, id, hecho, eliminar){
-    //si eliminar existe va a revotar una respuesta true o false
-    if (eliminar) {
-        return;
-    }
-      //se va a ver si en el id esta hecho, el signo nos dice si sí está hehco con el chechk o el uncheck
-    const realizado = hecho ? check : uncheck
-      //linea que se coloca cuando tenemos el check o el uncheck, aparece si si esta hecho
-    const LINE = hecho ? tachado : ''
-    const elemento =  `<li id="elemento">
-                        <i id="0" data="hecho" class ="bi ${realizado}"></i>
-                        <p class="tarea-lista  text ${LINE}">Tarea 1</p>
-                        <i id="0" data="eliminar" class="bi bi-x"></i>`
-                        lista.insertAdjacentHTML("beforeend", elemento);
-                        
-}
-
-//checa si elemnto está check o uncheck
-function tareaRealizada (elemento){
-  element.checkList.toggle(check);
-  element.checkList.toggle(uncheck);
-
-  element.parentNode.querySelector(".text").classList.toggle(tachado);
-  LIST [element.id].realizado = LIST[element.id].realizado ? false :true;
-
-}
-
-function tareaEliminada (element){
-  element.parentNode.parentNode,removeChild(element.parentNode);
-  LIST [element.id].realizado = LIST[element.id].eliminar = true;
-}
-*/
-
-// ''
-// definir las constantes
+// Definición las constantes.
 
 const fecha = document.querySelector('#fecha');
 const lista = document.querySelector('#lista');
@@ -84,15 +18,19 @@ fecha.innerHTML = FECHA.toLocaleDateString('es-MX',{
     month: 'short',
     day: 'numeric'
 });
-// DOM 
 
-// Función agregar tarea
+//DOM, nos permite hacer una interaccion con html, es una manera de llegar a las ramas del html (li en este caso).
+//Función agregar tarea.
 function agregarTarea(tarea,id,hecho,eliminar) {
+    //Si eliminar existe va a revotar una respuesta true o false.
     if (eliminar) {
         return
     };
 
+    //Cuando la tarea cambie, se mocstrara solo el circulo.
+    //Se va a ver si en el id esta hecho, el signo nos dice si sí está hehco con el chechk o el uncheck.
     const realizado = hecho ? check : uncheck;
+    //Linea que se coloca cuando tenemos el check o el uncheck, aparece si si esta hecho.
     const LINE = hecho ? tachado : '' ;
     const elemento = `<li id="elemento">
                     <i id="${id}" data="hecho" class="bi ${realizado}"></i>
@@ -103,6 +41,8 @@ function agregarTarea(tarea,id,hecho,eliminar) {
 
 };
  
+
+//Checa si elemnto está check o uncheck.
 function tareaRealizada(element) {
 
     element.classList.toggle(check);
